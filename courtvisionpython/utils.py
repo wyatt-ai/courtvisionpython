@@ -38,7 +38,7 @@ def get_match(year: int, matchid: str, event: str = "ao") -> json:
 
     Returns
     -------
-    json file
+    The python dict and a json file saved to the current dir
 
     """
     event_dict = {"rg": "roland_garros", "ao": "australian_open"}
@@ -85,7 +85,7 @@ def get_match(year: int, matchid: str, event: str = "ao") -> json:
                         match_codes.append(match_code)
         else:
             logger.error("Unknown tournament. Select ao or rg.")
-            return
+            return 1
 
     for m in match_codes:
         logger.info(f"Downloading {m}...")
@@ -105,3 +105,5 @@ def get_match(year: int, matchid: str, event: str = "ao") -> json:
         filename = os.path.join(savedir, f'{year}-{m}-{event}.json')
         with open(filename, 'w') as f:
             json.dump(data, f)
+
+        return data

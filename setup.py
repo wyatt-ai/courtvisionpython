@@ -13,6 +13,7 @@ setup(
     install_requires=[
         "pandas==1.1.5",
         "requests==2.26.0",
+        "pytest==6.2.4"
     ],
     include_package_data=True,
     test_suite="tests",
