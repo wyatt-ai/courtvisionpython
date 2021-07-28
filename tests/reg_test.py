@@ -5,7 +5,7 @@ import courtvisionpython as cvp
 
 
 def test_ao():
-    response = cvp.utils.get_match(2021, "MS701", "ao")
+    response = cvp.utils.get_match(2021, "MS701", "ao", True)
     if len(response["courtVisionData"]) == 0:
         return False
     else:
@@ -13,7 +13,7 @@ def test_ao():
 
 
 def test_rg():
-    response = cvp.utils.get_match(2021, "SD127", "rg")
+    response = cvp.utils.get_match(2021, "SD127", "rg", True)
     if len(response["courtVisionData"]) == 0:
         return False
     else:

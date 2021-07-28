@@ -9,7 +9,7 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 
-def get_match(year: int, matchid: str, event: str = "ao") -> json:
+def get_match(year: int, matchid: str, event: str = "ao", return_single_dict: bool = False) -> json:
     """
     Download court vision data in json format.
 
@@ -35,6 +35,8 @@ def get_match(year: int, matchid: str, event: str = "ao") -> json:
         Match ID. See description. "all" to download everything.
     event: str
         ao or rg for australian open or roland garros
+    return_single_dict: bool
+        Used in conjunction with a single match. Return the data directly.
 
     Returns
     -------
@@ -106,4 +108,5 @@ def get_match(year: int, matchid: str, event: str = "ao") -> json:
         with open(filename, 'w') as f:
             json.dump(data, f)
 
-        return data
+        if return_single_dict:
+            return data

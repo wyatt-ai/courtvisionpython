@@ -28,13 +28,13 @@ To download a single match from Australian Open 2021:
 
 ```python
 import courtvisionpython as cvp
-cvp.utils.get_match(2021, "SM###", "ao")
+cvp.utils.get_match(year=2021, matchid="SM###", event="ao", return_single_dict=True)
 ```
 
 Or to download all matches from Rolland Garros 2021:
 
 ```python
-cvp.utils.get_match(2021, "all", "rg")
+cvp.utils.get_match(year=2021, matchid="all", event="rg", return_single_dict=False)
 ```
 
 ## Development
