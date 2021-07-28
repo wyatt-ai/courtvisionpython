@@ -1,30 +1,62 @@
 ## courtvisionpython
 
-This package provides a few functions for extracting summary tracking data included in the
+This package is a python version of
+[skoval/courtvisionr](https://github.com/skoval/courtvisionr).
+
+It serves as a starting point for using tennis data in the Sports Analytics course offered
+at Concordia University.
+
+It provides a few functions for extracting summary tracking data included in the
 courtvision applet of the Australian Open and Roland Garros Grand Slams.
 The package does not include the data itself but rather provides the means for extracting
 what current and historical data is publicly available.
 
-This is adapted from [skoval/courtvisionr](https://github.com/skoval/courtvisionr) for
-python.
+Additional functionality will be added.
+Feel free to fork and add contributions.
+If you feel more comfortable in R, use
+[skoval/courtvisionr](https://github.com/skoval/courtvisionr).
 
 ## Installation
 
-To get started with the package, you can install the latest version using pip.
+To get started with the package, you can install the latest version using pip:
+
+```shell
+pip install https://github.com/wyatt-ai/courtvisionpython
+```
 
 To download a single match from Australian Open 2021:
 
 ```python
-get_match(2021, "SM###", "ao")
+import courtvisionpython as cvp
+cvp.utils.get_match(2021, "SM###", "ao")
 ```
 
-Or to download all matches from Australian Open 2021:
+Or to download all matches from Rolland Garros 2021:
 
 ```python
-get_match(2021, "all", "ao")
+cvp.utils.get_match(2021, "all", "rg")
 ```
 
-The rest follows the same as [here](https://github.com/skoval/courtvisionr).
+## Development
+
+Alternatively, after cloning the repository, one can do
+
+```shell
+pip install -e .
+```
+
+to use this package in a development environment.
+
+## Test
+
+To run basic regression tests:
+```shell
+pytest
+```
+
+Basically this tests if the URLs/API interface has changed, which would be a problem.
+
+The rest of the readme follows the same as [here](https://github.com/skoval/courtvisionr).
 
 ## Coverage
 
