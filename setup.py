@@ -13,7 +13,9 @@ setup(
     install_requires=[
         "pandas==1.1.5",
         "requests==2.26.0",
-        "pytest==6.2.4"
+        "pytest==6.2.4",
+        "matplotlib==3.4.3",
+        "scipy==1.7.1",
     ],
     include_package_data=True,
     test_suite="tests",
