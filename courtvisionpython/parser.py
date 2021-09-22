@@ -34,9 +34,11 @@ class InfoSys:
         self.players_data = raw_data["playersData"]
         self.sets_completed = raw_data["setsCompleted"]
 
+        # vetoed_columns = ["trajectoryData", "ballHitCordinate", "ballPeakCordinate", "ballNetCordinate",
+        #                   "ballBounceCordinate", "ballLastCordinate", "serverCordinate", "receiverCordinate",
+        #                   "serveBounceCordinate"]
         vetoed_columns = ["trajectoryData", "ballHitCordinate", "ballPeakCordinate", "ballNetCordinate",
-                          "ballBounceCordinate", "ballLastCordinate", "serverCordinate", "receiverCordinate",
-                          "serveBounceCordinate"]
+                          "ballBounceCordinate", "ballLastCordinate", "serveBounceCordinate"]
 
         points_data = raw_data["pointsData"]
 

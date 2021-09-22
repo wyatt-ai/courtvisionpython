@@ -24,6 +24,8 @@ To get started with the package, you can install the latest version using pip:
 pip install https://github.com/wyatt-ai/courtvisionpython
 ```
 
+## Downloading Data
+
 To download a single match from Australian Open 2021:
 
 ```python
@@ -36,6 +38,33 @@ Or to download all matches from Rolland Garros 2021:
 ```python
 cvp.utils.get_match(year=2021, matchid="all", event="rg", return_single_dict=False)
 ```
+
+## Usage
+
+This package aims to make dealing with the data as straightforward as possible. Once the data has been downloaded (see above), a "match object" can be created:
+
+```python
+import courtvisionpython as cvp
+filename="/path/to/2021-MS403-ao.json"
+match = cvp.read_match(filename)
+```
+
+One can retrieve all `points_data`:
+
+```python
+points_data = match.points_data
+```
+
+or player info:
+
+```python
+players_data = match.players_data
+```
+
+See `match.py` for more methods and properties.
+
+See [data_description.md](data_description.md) for explanation of some of the point data columns.
+
 
 ## Development
 
@@ -50,6 +79,7 @@ to use this package in a development environment.
 ## Test
 
 To run basic regression tests:
+
 ```shell
 pytest
 ```
