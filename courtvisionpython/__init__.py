@@ -8,6 +8,8 @@ from courtvisionpython import match  # noqa: F401
 from courtvisionpython.match import Match  # noqa: F401
 from courtvisionpython.match import read_match  # noqa: F401
 
+from courtvisionpython import court  # noqa: F401
+
 
 from ._version import get_versions
 

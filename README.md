@@ -65,6 +65,13 @@ See `match.py` for more methods and properties.
 
 See [data_description.md](data_description.md) for explanation of some of the point data columns.
 
+Draw a court:
+
+```python
+fig, ax = cvp.court()
+```
+
+See court module for arguments.
 
 ## Development
 
