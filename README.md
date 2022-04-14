@@ -1,3 +1,5 @@
+<Unfortunately, it seems the endpoints have been encrypted, so retrieving data no longer works.>
+
 ## courtvisionpython
 
 This package is a python version of
