@@ -11,7 +11,7 @@ setup(
     packages=["courtvisionpython"],
     license="MIT",
     install_requires=[
-        "pandas<2.0.0",
+        "pandas==2.2.3",
         "requests",
         "pytest",
         "matplotlib",
